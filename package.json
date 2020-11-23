@@ -1,0 +1,25 @@
+{
+  "name": "presentation-manager",
+  "version": "0.0.1",
+  "description": "Helping to manage student presentation schedule in a Zoom meeting.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiffman/Presentation-Manager.git"
+  },
+  "author": "Daniel Shiffman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shiffman/Presentation-Manager/issues"
+  },
+  "homepage": "https://github.com/shiffman/Presentation-Manager#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.3"
+  }
+}
