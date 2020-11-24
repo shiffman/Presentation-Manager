@@ -8,14 +8,20 @@ let info = {
 let timing = false;
 let affirmations;
 let affirmation;
+let session;
 let angle = 0;
+
+function removeRandom(arr) {
+  let i = floor(random(arr.length));
+  return arr.splice(i, 1);
+}
 
 async function loadSession() {
   const response = await fetch('/session');
-  const session = await response.json();
+  session = await response.json();
   timeLeft = session.minutes * 60;
-  affirmations = session.affirmations;
-  affirmation = random(affirmations);
+  affirmations = session.affirmations.slice();
+  affirmation = removeRandom(affirmations);
   affFade = 0;
 }
 
@@ -58,10 +64,13 @@ function draw() {
     text(affirmation, width / 2, 0.75 * height);
   }
 
-  angle += 0.02;
+  angle += 0.035;
   if (angle > TWO_PI) {
     angle = 0;
-    affirmation = random(affirmations);
+    affirmation = removeRandom(affirmations);
+    if (affirmations.length < 1) {
+      affirmations = session.affirmations.slice();
+    }
   }
 }
 
