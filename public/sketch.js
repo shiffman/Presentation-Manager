@@ -2,12 +2,12 @@ let startTime = 0;
 let currentTime = 0;
 let timeLeft;
 let info = {
-  name: 'starting soon',
-  next: 'starting soon',
+  name: '___',
+  next: '___',
 };
 let timing = false;
 let affirmations;
-let affirmationIndex = 0;
+let affirmation;
 let angle = 0;
 
 async function loadSession() {
@@ -15,6 +15,7 @@ async function loadSession() {
   const session = await response.json();
   timeLeft = session.minutes * 60;
   affirmations = session.affirmations;
+  affirmation = random(affirmations);
   affFade = 0;
 }
 
@@ -37,27 +38,37 @@ function draw() {
   currentTime = floor((millis() - startTime) / 1000);
   textAlign(CENTER, CENTER);
   fill(0);
-  textSize(24);
+
+  const fs = height / 10;
+  textFont('Georgia');
   let timer = convertSeconds(timeLeft);
-  if (timing) timer = convertSeconds(timeLeft - currentTime);
-  const txt = `${info.name}\n${timer}\nnext: ${info.next}`;
-  text(txt, width / 2, height / 3);
+  if (timing)
+    timer = convertSeconds(constrain(timeLeft - currentTime, 0, timeLeft));
+  textSize(fs * 1.61803398875);
+  text(`${timer}`, width / 2, height / 3 - fs * 1.61803398875);
+  textSize(fs);
+  text(`${info.name}`, width / 2, height / 3);
+  textSize(fs / 1.61803398875);
+  text(`up next: ${info.next}`, width / 2, height / 3 + fs);
 
   if (affirmations) {
     affFade = map(sin(angle - HALF_PI), -1, 1, 0, 255);
     fill(0, affFade);
-    text(affirmations[affirmationIndex], width / 2, 0.75 * height);
+    textSize(fs * 1.61803398875);
+    text(affirmation, width / 2, 0.75 * height);
   }
 
-  angle += 0.01;
+  angle += 0.02;
   if (angle > TWO_PI) {
     angle = 0;
-    affirmationIndex = (affirmationIndex + 1) % affirmations.length;
+    affirmation = random(affirmations);
   }
 }
 
 function convertSeconds(s) {
   var min = floor(s / 60);
   var sec = s % 60;
-  return nf(min, 2) + ':' + nf(sec, 2);
+
+  let digits = timeLeft / 60 >= 10 ? 2 : 1;
+  return nf(min, digits) + ':' + nf(sec, 2);
 }

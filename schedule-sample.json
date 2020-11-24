@@ -1,5 +1,10 @@
 {
   "minutes": 8,
-  "presenters": ["Name 1", "Name 2", "Name 3"],
-  "affirmations": ["You're doing great!", "💖💖💖💖💖💖💖💖💖💖💖"]
+  "presenters": ["Turtle", "Chickadee", "Sloth", "Owl"],
+  "affirmations": [
+    "💖💖 You’re doing great! 💖💖",
+    "🌈 Yay! 🌈",
+    "💫 Awesome job! 💫",
+    "✨ Keep it up! ✨"
+  ]
 }
