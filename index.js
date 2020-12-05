@@ -18,11 +18,19 @@ app.get('/session', (request, response) => {
 
 io.on('connection', (socket) => {
   console.log('New client: ' + socket.id);
+
   socket.on('new presenter', (data) => {
     console.log(data);
     io.emit('start presenter', data);
   });
+
+  socket.on('update note', (data) => {
+    console.log(data);
+    io.emit('update note', data);
+  });
+
   socket.on('disconnect', function () {
     console.log('Client disconnected ' + socket.id);
   });
+
 });

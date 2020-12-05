@@ -16,7 +16,7 @@ async function loadSession() {
     const presenterDiv = createDiv('');
     createSpan(`${i + 1}: `).parent(presenterDiv);
     inputs[i] = createInput(name).parent(presenterDiv);
-    const start = createButton('start')
+    const start = createButton('Start')
       .parent(presenterDiv)
       .mousePressed(() => {
         socket.emit('new presenter', {
@@ -25,4 +25,26 @@ async function loadSession() {
         });
       });
   }
+  addAudioOption(socket);
+}
+
+
+function addAudioOption(socket) {
+  var audioData = "";
+
+  const audioDiv = createDiv('');
+  const updateButton = createButton('Update');
+  createSpan('Audio :').parent(audioDiv);
+
+  audioDiv.addClass('option-audio');
+  const audioInput = createFileInput((file) => {
+    audioData = file.data;
+  }).parent(audioDiv);
+
+
+  updateButton
+    .parent(audioDiv)
+    .mousePressed(() => {
+      socket.emit('update note', audioData);
+    });
 }

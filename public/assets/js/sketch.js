@@ -11,6 +11,8 @@ let affirmation;
 let session;
 let angle = 0;
 let gravity;
+let noteAudio;
+let playAudio = false;
 
 // fireworks
 let colors;
@@ -55,6 +57,17 @@ function setup() {
     timing = true;
     info = data;
     startTime = millis();
+
+    // if sound exist & noteis playing = stop 
+    if (noteAudio && noteAudio.isPlaying()) {
+      noteAudio.stop();
+    }
+
+    playAudio = true;
+  });
+  socket.on('update note', (data) => {
+    console.log('load note from blob : ', data);
+    noteAudio = loadSound(data);
   });
 }
 
@@ -74,8 +87,24 @@ function draw() {
     if (random(1) < 0.05) {
       fireworks.push(new Firework());
     }
+
+    if (playAudio && noteAudio) {
+      console.log('playing audio ...');
+      playAudio = false;
+
+      // stop if old still playing
+      if (noteAudio.isPlaying()) {
+        noteAudio.stop();
+      }
+
+      // play new 
+      noteAudio.play();
+    }
+
   }
-  if (timing) timer = convertSeconds(left);
+  if (timing) {
+    timer = convertSeconds(left);
+  }
 
   textSize(fs * 1.61803398875);
   text(`${timer}`, width / 2, height / 3 - fs * 1.61803398875);
