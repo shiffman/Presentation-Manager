@@ -1,0 +1,24 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+body {
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input, button {
+    margin: 2px;
+    padding: 0.3rem;
+    border: solid 1px #989898;
+    border-radius: 2px;
+}
+button{
+    min-width: 80px;
+    background: #2DC4F5;
+    border: solid 1px #2DC4F5;
+}
+button:hover{
+    cursor: pointer;
+    background: #31b5e1;
+    border: solid 1px #2DC4F5;
+}
