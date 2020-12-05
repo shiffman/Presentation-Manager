@@ -2,6 +2,6 @@ body, html, canvas {
     padding: 0;
     margin: 0;
 }
-canvas{
-    overflow: hidden;
+body, canvas{
+    overflow: hidden !important;
 }
