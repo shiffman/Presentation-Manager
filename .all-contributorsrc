@@ -22,6 +22,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "yassinrais",
+      "name": "Yassine Rais",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/25354731?v=4",
+      "profile": "https://rais.me",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
