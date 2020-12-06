@@ -29,6 +29,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/iKittyCode"><img src="https://avatars0.githubusercontent.com/u/73798015?v=4" width="100px;" alt=""/><br /><sub><b>iKittyCode</b></sub></a><br /><a href="https://github.com/shiffman/Presentation-Manager/commits?author=iKittyCode" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Ian-GL"><img src="https://avatars1.githubusercontent.com/u/24900688?v=4" width="100px;" alt=""/><br /><sub><b>Ian González</b></sub></a><br /><a href="#ideas-Ian-GL" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://abdnahid.com"><img src="https://avatars3.githubusercontent.com/u/43277262?v=4" width="100px;" alt=""/><br /><sub><b>Abdullah Al Nahid</b></sub></a><br /><a href="#ideas-nahid18" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
