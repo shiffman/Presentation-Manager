@@ -9,7 +9,6 @@ app.use(express.static('public'));
 app.use(express.json());
 
 const io = require('socket.io')(server);
-
 const session = JSON.parse(fs.readFileSync('schedule-sample.json', 'utf-8'));
 
 app.get('/session', (request, response) => {
@@ -22,7 +21,7 @@ io.on('connection', (socket) => {
     console.log(data);
     io.emit('start presenter', data);
   });
-  socket.on('disconnect', function () {
+  socket.on('disconnect', () => {
     console.log('Client disconnected ' + socket.id);
   });
 });
