@@ -54,6 +54,7 @@ function setup() {
     console.log(data);
     timing = true;
     info = data;
+    timeLeft = data.minutes * 60;
     startTime = millis();
   });
 }
