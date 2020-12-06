@@ -8,7 +8,7 @@ async function loadSession() {
   const response = await fetch('/session');
   const session = await response.json();
   const inputs = [];
-  const TinMin = [];
+  const Tinput = [];
 
   // extra spot for when we are done
   session.presenters.push('💖');
@@ -20,14 +20,14 @@ async function loadSession() {
     const presenterDiv = createDiv('');
     createSpan(`${i + 1}: `).parent(presenterDiv);
     inputs[i] = createInput(name).parent(presenterDiv).addClass(`${i}-name name`);
-    TinMin[i] = createInput(str(T)).parent(presenterDiv).addClass(`${i}-timer timer`);
+    Tinput[i] = createInput(str(T)).parent(presenterDiv).addClass(`${i}-timer timer`);
     const start = createButton('start')
       .parent(presenterDiv)
       .mousePressed(() => {
         socket.emit('new presenter', {
           name: inputs[i].value(),
           next: inputs[i + 1].value(),
-          minutes: TinMin[i].value(),
+          minutes: Tinput[i].value(),
         });
       });
   }
