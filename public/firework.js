@@ -56,7 +56,10 @@ class Firework {
       this.firework.show();
     }
 
-    for (var i = 0; i < this.particles.length; i++) {
+//     for (var i = 0; i < this.particles.length; i++) {
+//       this.particles[i].show();
+//     }
+    for (var i in this.particles) {
       this.particles[i].show();
     }
   }
