@@ -1,6 +1,6 @@
 # Presentation-Manager
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Simple web app to manage student presentation schedule.
@@ -28,6 +28,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/iKittyCode"><img src="https://avatars0.githubusercontent.com/u/73798015?v=4" width="100px;" alt=""/><br /><sub><b>iKittyCode</b></sub></a><br /><a href="https://github.com/shiffman/Presentation-Manager/commits?author=iKittyCode" title="Code">💻</a> <a href="#ideas-iKittyCode" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/Ian-GL"><img src="https://avatars1.githubusercontent.com/u/24900688?v=4" width="100px;" alt=""/><br /><sub><b>Ian González</b></sub></a><br /><a href="#ideas-Ian-GL" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://abdnahid.com"><img src="https://avatars3.githubusercontent.com/u/43277262?v=4" width="100px;" alt=""/><br /><sub><b>Abdullah Al Nahid</b></sub></a><br /><a href="#ideas-nahid18" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://rais.me"><img src="https://avatars3.githubusercontent.com/u/25354731?v=4" width="100px;" alt=""/><br /><sub><b>Yassine Rais</b></sub></a><br /><a href="#ideas-yassinrais" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/shiffman/Presentation-Manager/commits?author=yassinrais" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ChrisDrafters"><img src="https://avatars2.githubusercontent.com/u/66272438?v=4" width="100px;" alt=""/><br /><sub><b>Chris Manning</b></sub></a><br /><a href="https://github.com/shiffman/Presentation-Manager/commits?author=ChrisDrafters" title="Code">💻</a></td>
   </tr>
 </table>
 

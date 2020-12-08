@@ -14,6 +14,43 @@
         "code",
         "ideas"
       ]
+    },
+    {
+      "login": "Ian-GL",
+      "name": "Ian González",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/24900688?v=4",
+      "profile": "https://github.com/Ian-GL",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "nahid18",
+      "name": "Abdullah Al Nahid",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/43277262?v=4",
+      "profile": "https://abdnahid.com",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "yassinrais",
+      "name": "Yassine Rais",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/25354731?v=4",
+      "profile": "https://rais.me",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "ChrisDrafters",
+      "name": "Chris Manning",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/66272438?v=4",
+      "profile": "https://github.com/ChrisDrafters",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
