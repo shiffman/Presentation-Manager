@@ -41,6 +41,15 @@
         "ideas",
         "code"
       ]
+    },
+    {
+      "login": "ChrisDrafters",
+      "name": "Chris Manning",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/66272438?v=4",
+      "profile": "https://github.com/ChrisDrafters",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
