@@ -1,17 +1,1 @@
-{
-  "minutes": 1,
-  "presenters": ["Turtle", "Chickadee", "Sloth", "Owl"],
-  "affirmations": [
-    "💖 You’re doing great! 💖",
-    "🌈 Yay! 🌈",
-    "💫 Awesome job! 💫",
-    "✨ Keep it up! ✨",
-    "You are the 🐝's knees!",
-    "💪 You're crushing it! 💪",
-    "⚡ Nothing can stop you now! ⚡",
-    "💯 Outstanding! 💯",
-    "💥 Superb! 💥",
-    "💞 You should be so proud! 💞",
-    "🤩 10/10! 🤩"
-  ]
-}
+{"minutes":1,"presenters":["Chickadee","Sloth","Owl","test"],"affirmations":["💖 You’re doing great! 💖","🌈 Yay! 🌈","💫 Awesome job! 💫","✨ Keep it up! ✨","You are the 🐝's knees!","💪 You're crushing it! 💪","⚡ Nothing can stop you now! ⚡","💯 Outstanding! 💯","💥 Superb! 💥","💞 You should be so proud! 💞","🤩 10/10! 🤩"]}
