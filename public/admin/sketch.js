@@ -18,6 +18,7 @@ async function loadSession() {
   drawSession();
 }
 
+
 function drawSession() {
   removeElements(); // clear old session data
   for (let i = 0; i < session.presenters.length; i++) {
@@ -30,7 +31,6 @@ function drawSession() {
       session.presenters[i] = inputs[i].elt.value;
     });
     TinMin[i] = createInput(str(T)).parent(presenterDiv).addClass(`${i}-timer timer`);
-
     const start = createButton('start')
       .parent(presenterDiv)
       .mousePressed(() => {
@@ -48,7 +48,7 @@ function drawSession() {
       });
   }
   createElement('br').parent(presenterDiv);
-  const add = createButton('New Row')
+  const add = createButton('add presenter')
     .parent(presenterDiv)
     .mousePressed(() => {
       session.presenters.push('');
