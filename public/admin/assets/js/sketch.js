@@ -13,7 +13,6 @@ const socket = io();
 async function loadSession() {
   const response = await fetch('/session');
   session = await response.json();
-
   // extra spot for when we are done
   drawSession();
 }
@@ -21,15 +20,20 @@ async function loadSession() {
 
 function drawSession() {
   removeElements(); // clear old session data
+  const session = await response.json();
+  const inputs = [];
+  const TinMin = [];
+
+  // extra spot for when we are done
+  session.presenters.push('💖');
+
   for (let i = 0; i < session.presenters.length; i++) {
     const name = session.presenters[i];
     const T = session.minutes;
 
-    presenterDiv = createDiv('');
+    const presenterDiv = createDiv('');
     createSpan(`${i + 1}: `).parent(presenterDiv);
-    inputs[i] = createInput(name).parent(presenterDiv).addClass(`${i}-name name`).input(() => {
-      session.presenters[i] = inputs[i].elt.value;
-    });
+    inputs[i] = createInput(name).parent(presenterDiv).addClass(`${i}-name name`);
     TinMin[i] = createInput(str(T)).parent(presenterDiv).addClass(`${i}-timer timer`);
     const start = createButton('start')
       .parent(presenterDiv)
@@ -47,8 +51,9 @@ function drawSession() {
         drawSession();
       });
   }
+  
   createElement('br').parent(presenterDiv);
-  const add = createButton('add presenter')
+  const add = createButton('New presenter')
     .parent(presenterDiv)
     .mousePressed(() => {
       session.presenters.push('');
@@ -60,6 +65,4 @@ function drawSession() {
     .mousePressed(() => {
       socket.emit('storeSession', session);
     });
-
 }
-
