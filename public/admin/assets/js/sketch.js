@@ -20,7 +20,6 @@ async function loadSession() {
 
 function drawSession() {
   removeElements(); // clear old session data
-  const session = await response.json();
   const inputs = [];
   const TinMin = [];
 
@@ -44,24 +43,26 @@ function drawSession() {
           minutes: TinMin[i].value(),
         });
       });
-    const remove = createButton('remove')
-      .parent(presenterDiv)
-      .mousePressed(() => {
-        session.presenters.splice(i, 1);
-        drawSession();
-      });
+    // const remove = createButton('remove')
+    //   .parent(presenterDiv)
+    //   .mousePressed(() => {
+    //     session.presenters.splice(i, 1);
+    //     drawSession();
+    //   });
   }
-  createElement('br').parent(presenterDiv);
-  const add = createButton('New Row')
-    .parent(presenterDiv)
-    .mousePressed(() => {
-      session.presenters.push('');
-      drawSession();
-    });
-  // TODO: Save minutes? (need to modify core JSON structure)
-  const save = createButton('Save JSON')
-    .parent(presenterDiv)
-    .mousePressed(() => {
-      socket.emit('storeSession', session);
-    });
+
+  // curently broken
+  // createElement('br').parent(presenterDiv);
+  // const add = createButton('New presenter')
+  //   .parent(presenterDiv)
+  //   .mousePressed(() => {
+  //     session.presenters.push('');
+  //     drawSession();
+  //   });
+  // // TODO: Save minutes? (need to modify core JSON structure)
+  // const save = createButton('Save JSON')
+  //   .parent(presenterDiv)
+  //   .mousePressed(() => {
+  //     socket.emit('storeSession', session);
+  //   });
 }
