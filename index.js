@@ -11,9 +11,9 @@ app.use(express.json());
 const io = require('socket.io')(server);
 let session;
 
-app.get('/session', (request, response) => {
+app.get('/session', (req, res) => {
   session = JSON.parse(fs.readFileSync('schedule-sample.json', 'utf-8'));
-  response.json(session);
+  res.json(session);
 });
 
 io.on('connection', (socket) => {
