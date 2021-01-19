@@ -1,9 +1,9 @@
 let startTime = 0;
 let currentTime = 0;
-let timeLeft;
+let timeLeft = 0;
 let info = {
-  name: '___',
-  next: '___',
+  name: "___",
+  next: "___",
 };
 let timing = false;
 let affirmations;
@@ -22,13 +22,14 @@ function removeRandom(arr) {
 }
 
 async function loadSession() {
-  const response = await fetch('/session');
+  const response = await fetch("/session");
   session = await response.json();
-  timeLeft = session.minutes * 60;
   affirmations = session.affirmations.slice();
   affirmation = removeRandom(affirmations);
   affFade = 0;
 }
+
+// setInterval(loadSession, 1000);
 
 function setup() {
   loadSession();
@@ -48,29 +49,29 @@ function setup() {
   ];
   createCanvas(windowWidth, windowHeight);
   clear();
-  startTime = millis();
-  const socket = io();
-  socket.on('start presenter', (data) => {
-    console.log(data);
-    timing = true;
-    info = data;
-    timeLeft = data.minutes * 60;
-    startTime = millis();
-  });
 }
+
+const socket = io();
+socket.on("user", (data) => {
+  console.log(data);
+  timing = true;
+  info = data;
+  timeLeft = data.minutes * 60 + data.seconds;
+});
 
 function draw() {
   clear();
-  currentTime = floor((millis() - startTime) / 1000);
+  currentTime = timeLeft;
   textAlign(CENTER, CENTER);
   fill(0);
   noStroke();
 
   const fs = height / 10;
-  textFont('Georgia');
+  textFont("Georgia");
   let timer = convertSeconds(timeLeft);
-  let left = timeLeft - currentTime;
-  if (left < 0) {
+  let left = timeLeft;
+  // console.log(left);
+  if (left <= 0) {
     left = 0;
     if (random(1) < 0.05) {
       fireworks.push(new Firework());
@@ -116,5 +117,5 @@ function convertSeconds(s) {
   var sec = s % 60;
 
   let digits = timeLeft / 60 >= 10 ? 2 : 1;
-  return nf(min, digits) + ':' + nf(sec, 2);
+  return nf(min, digits) + ":" + nf(sec, 2);
 }

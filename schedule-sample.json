@@ -1,6 +1,10 @@
 {
-  "minutes": 1,
-  "presenters": ["Turtle", "Chickadee", "Sloth", "Owl"],
+  "presenters": [
+    { "name": "Turtle", "seconds": "6", "minutes": "0" },
+    { "name": "Chickadee", "seconds": "0", "minutes": "5" },
+    { "name": "Sloth", "seconds": "0", "minutes": "0" },
+    { "name": "Walrus", "minutes": "1", "seconds": "0" }
+  ],
   "affirmations": [
     "💖 You’re doing great! 💖",
     "🌈 Yay! 🌈",
