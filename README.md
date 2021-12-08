@@ -8,10 +8,11 @@ Simple web app to manage student presentation schedule.
 ![GIF showing timer, names, and affirmations](demo.gif)
 
 ## set up
-1. clone repo
-2. run `npm install` - requires node
-3. run `npm start`
-4. open http://localhost:3000/
+1. clone repo via `git clone https://github.com/shiffman/Presentation-Manager`
+2. run `cd Presentation-Manager'
+3. run `npm install` - requires node
+4. run `npm start`
+5. open http://localhost:3000/
 
 
 ## routes 
